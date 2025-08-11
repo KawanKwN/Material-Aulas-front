@@ -6,7 +6,14 @@ nav{
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex; /*tora a caixa flexivel*/
+  flex-direction: column; /*muda a dirção dos itens*/
+  justify-content:center; /*alinha horizontamente*/
+  align-items: center; /* alinha verticalmente*/
+  flex-wrap:wrap; /*permite pular linha*/
+  align-content: flex-end; /*alinhaverticamente as linhas apos o wrap */
   }
+  
 
   & a:link,
   & a:visited {
@@ -18,4 +25,15 @@ nav{
     display: inline-block;
     text-decoration: none;
   }
+}
+
+ul > * {
+  flex-shrink:1; /*determina como os itens vao encolher */
+  flex-grow: 1;
+  flex-basis: 100px; /*tamanho inicial*/
+  flex: 1;
+}
+
+ul li: last-child{
+  align-self 
 }
